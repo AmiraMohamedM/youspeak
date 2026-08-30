@@ -1,0 +1,119 @@
+    <!-- ============ CHECKOUT MODAL ============ -->
+    <div
+      class="checkout-overlay"
+      id="checkoutOverlay"
+      onclick="if (event.target === this) closeCheckout();"
+    >
+      <div
+        class="checkout-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="coTitle"
+      >
+        <button
+          type="button"
+          class="co-close"
+          onclick="closeCheckout()"
+          aria-label="إغلاق"
+        >
+          ✕
+        </button>
+
+        <div class="co-summary">
+          <span class="co-eyebrow">إتمام الحجز</span>
+          <h3 id="coTitle" class="co-plan"></h3>
+          <div class="co-price-row">
+            <span class="co-price latin"></span>
+            <span class="co-duration"></span>
+          </div>
+          <div class="co-order">
+            رقم الطلب: <strong class="latin co-code"></strong>
+          </div>
+        </div>
+
+        <div class="co-methods">
+          <button
+            type="button"
+            class="co-tab active"
+            data-method="instapay"
+            onclick="switchMethod(this)"
+          >
+            إنستاباي
+          </button>
+          <button
+            type="button"
+            class="co-tab"
+            data-method="vodafone"
+            onclick="switchMethod(this)"
+          >
+            فودافون كاش
+          </button>
+        </div>
+
+        <div class="co-panel" data-method-panel="instapay">
+          <p class="co-step">
+            1. افتحي تطبيق إنستاباي وحوّلي مبلغ
+            <strong class="co-price-inline latin"></strong> جنيه إلى:
+          </p>
+          <div class="co-copy-row">
+            <span class="latin co-value" id="instapayHandle"
+              >YouSpeakAcademy@instapay</span
+            >
+            <button
+              type="button"
+              class="co-copy"
+              onclick="copyValue('instapayHandle', this)"
+            >
+              نسخ
+            </button>
+          </div>
+          <p class="co-step">
+            2. اكتبي رقم الطلب <strong class="latin co-code-inline"></strong> في
+            خانة الملاحظات لو متاحة.
+          </p>
+        </div>
+
+        <div
+          class="co-panel"
+          data-method-panel="vodafone"
+          style="display: none"
+        >
+          <p class="co-step">
+            1. حوّلي مبلغ <strong class="co-price-inline latin"></strong> جنيه
+            عبر فودافون كاش إلى الرقم:
+          </p>
+          <div class="co-copy-row">
+            <span class="latin co-value" id="vodafoneNumber">010XXXXXXXX</span>
+            <button
+              type="button"
+              class="co-copy"
+              onclick="copyValue('vodafoneNumber', this)"
+            >
+              نسخ
+            </button>
+          </div>
+          <p class="co-step">
+            2. احتفظي برسالة التأكيد اللي بتوصلك من فودافون.
+          </p>
+        </div>
+
+        <p class="co-step co-final">
+          3. بعد التحويل، دوسي على الزرار وابعتي لقطة شاشة الإيصال على واتساب
+          عشان نأكد حجزك.
+        </p>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary co-confirm"
+          id="coConfirmBtn"
+        >
+          أرسلت التحويل — تأكيد عبر واتساب
+        </a>
+        <p class="co-note">
+          الحجز بيتأكد يدويًا بعد استلام إيصال التحويل، وهيوصلك رد بالتأكيد خلال
+          ساعات العمل.
+        </p>
+      </div>
+    </div>

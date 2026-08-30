@@ -1,0 +1,76 @@
+      :root {
+        --navy-900: #0a1740;
+        --navy-800: #0f1f4f;
+        --navy-700: #152a63;
+        --navy-600: #1d3a82;
+        --red-600: #e2313d;
+        --red-700: #c41e2a;
+        --gold-400: #f4b23a;
+        --cream-50: #faf7f0;
+        --cream-100: #f2ede1;
+        --ink-900: #161a2e;
+        --paper: #ffffff;
+        --line: rgba(10, 23, 64, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+        background: var(--cream-50);
+        color: var(--ink-900);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      .display {
+        font-family: "Cairo", sans-serif;
+        font-weight: 800;
+      }
+      .latin {
+        font-family: "Sora", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* ---------- reduced motion ---------- */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.001s !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001s !important;
+          scroll-behavior: auto !important;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+
+      /* ---------- focus ---------- */
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--gold-400);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+

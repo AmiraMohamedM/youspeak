@@ -1,0 +1,51 @@
+/* ================= FOOTER ================= */
+footer {
+  background: var(--navy-900);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 34px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.foot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 14px;
+}
+.foot-links {
+  display: flex;
+  gap: 20px;
+}
+.foot-links a {
+  position: relative;
+}
+.foot-links a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+.foot-links a:hover::before {
+  transform: scaleX(1);
+}
+.foot-links a:hover {
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .foot-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .foot-row > span {
+    justify-content: center;
+  }
+  .foot-links {
+    gap: 16px;
+  }
+}

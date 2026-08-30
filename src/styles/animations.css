@@ -1,0 +1,95 @@
+      /* ================= SCROLL PROGRESS ================= */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 3px;
+        z-index: 200;
+        background: transparent;
+      }
+      .scroll-progress .bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--red-600), var(--gold-400));
+        transform-origin: right;
+        transition: width 0.08s linear;
+      }
+
+      /* ================= REVEAL ANIMATIONS ================= */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-scale {
+        opacity: 0;
+        transform: scale(0.92);
+        transition:
+          opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-scale.in-view {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(36px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-right.in-view {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-36px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-left.in-view {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      /* stagger children */
+      .stagger > * {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .stagger.in-view > * {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .stagger.in-view > *:nth-child(1) {
+        transition-delay: 0.04s;
+      }
+      .stagger.in-view > *:nth-child(2) {
+        transition-delay: 0.12s;
+      }
+      .stagger.in-view > *:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      .stagger.in-view > *:nth-child(4) {
+        transition-delay: 0.28s;
+      }
+      .stagger.in-view > *:nth-child(5) {
+        transition-delay: 0.36s;
+      }
+      .stagger.in-view > *:nth-child(6) {
+        transition-delay: 0.44s;
+      }
+

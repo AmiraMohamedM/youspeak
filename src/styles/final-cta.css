@@ -1,0 +1,53 @@
+.final-cta {
+  background: linear-gradient(140deg, var(--navy-900), var(--navy-700));
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(226, 49, 61, 0.18), transparent 70%);
+  top: -220px;
+  left: -160px;
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+.final-cta h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 16px;
+}
+.final-cta p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17px;
+  margin-bottom: 34px;
+  max-width: 520px;
+  margin-inline: auto;
+}
+.contact-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .final-cta {
+    padding: 64px 0;
+  }
+  .final-cta p {
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+  .contact-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+/* ==========================================================
+   YouSpeak Academy — Stylesheet entry point.
+   Order matters: base first, then shared/animation helpers,
+   then one file per page section, in the order they appear
+   on the page. Add new sections here when you add a partial.
+   ========================================================== */
+
+@import "./base.css";
+@import "./animations.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./shared.css";
+@import "./booth.css";
+@import "./pricing.css";
+@import "./testimonials.css";
+@import "./final-cta.css";
+@import "./footer.css";
+@import "./checkout.css";
